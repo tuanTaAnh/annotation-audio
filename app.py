@@ -4,7 +4,7 @@ import os
 import time
 
 app=Flask(__name__,template_folder='templates')
-UPLOAD_FOLDER = r"https://github.com/tuanTaAnh/annotation-audio/blob/master/data/test/"
+UPLOAD_FOLDER = r"data/test/"
 JSON_FOLDER = r"static/json/test"
 path = 'https://github.com/tuanTaAnh/annotation-audio/blob/master/data/test/test_1620124434.mp3'
 # path = '/Users/taanhtuan/Desktop/annotator/data/test/test_1620121009.mp3'
