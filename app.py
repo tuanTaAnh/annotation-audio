@@ -4,9 +4,9 @@ import os
 import time
 
 app=Flask(__name__,template_folder='templates')
-UPLOAD_FOLDER = r"data/test/"
+UPLOAD_FOLDER = r"data/test"
 JSON_FOLDER = r"static/json/test"
-path = 'https://github.com/tuanTaAnh/annotation-audio/blob/master/data/test/test_1620124434.mp3'
+path = 'http://www.archive.org/download/mshortworks_001_1202_librivox/msw001_03_rashomon_akutagawa_mt_64kb.mp3'
 # path = '/Users/taanhtuan/Desktop/annotator/data/test/test_1620121009.mp3'
 
 
@@ -32,7 +32,7 @@ def success():
         with open(annotationpath, "w") as write_file:
             json.dump(emptydata, write_file)
 
-        return render_template("annotator.html", path=path)
+        return render_template("annotator.html", path=savepath)
 
 
 
