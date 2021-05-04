@@ -18,8 +18,8 @@ def upload():
 @app.route('/annotator', methods=['POST'])
 def success():
     if request.method == 'POST':
-        # f = request.files['file']
-        # # print("f: ", f)
+        f = request.files['file']
+        print("f: ", f)
         # file_extension = f.filename.split(".")[-1]
         # time_file = int(time.time())
         # filename = 'test_{}.{}'.format(time_file, file_extension)
