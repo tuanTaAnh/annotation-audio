@@ -20,17 +20,17 @@ def success():
     if request.method == 'POST':
         f = request.files['file']
         print("f: ", f)
-        # file_extension = f.filename.split(".")[-1]
-        # time_file = int(time.time())
-        # filename = 'test_{}.{}'.format(time_file, file_extension)
-        # annotation_file = 'test_{}.json'.format(time_file)
-        # print("file name: ", filename)
-        # savepath = os.path.join(UPLOAD_FOLDER, filename)
-        # annotationpath = os.path.join(JSON_FOLDER, annotation_file)
-        # f.save(savepath)
-        # emptydata = []
-        # with open(annotationpath, "w") as write_file:
-        #     json.dump(emptydata, write_file)
+        file_extension = f.filename.split(".")[-1]
+        time_file = int(time.time())
+        filename = 'test_{}.{}'.format(time_file, file_extension)
+        annotation_file = 'test_{}.json'.format(time_file)
+        print("file name: ", filename)
+        savepath = os.path.join(UPLOAD_FOLDER, filename)
+        annotationpath = os.path.join(JSON_FOLDER, annotation_file)
+        f.save(savepath)
+        emptydata = []
+        with open(annotationpath, "w") as write_file:
+            json.dump(emptydata, write_file)
 
         return render_template("annotator.html", path=path)
 
