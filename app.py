@@ -32,7 +32,7 @@ def success():
         with open(annotationpath, "w") as write_file:
             json.dump(emptydata, write_file)
 
-        return render_template("annotator.html", path=savepath)
+        return render_template("annotator.html", path=path)
 
 
 
